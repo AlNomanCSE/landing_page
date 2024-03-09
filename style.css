@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --blue: #4c5fd5;
+  --midwhite: #dadbf1;
+  --lightBlac: #191a1b;
+  --darkBlack: #000000;
+  --white: #ffffff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+}
+
+.Header {
+  width: 100vw;
+  height: 80px;
+  background-color: var(--darkBlack);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4vw;
+}
+.logoName {
+  display: flex;
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+.logoName h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.logoName .logo {
+  width: 100px;
+  height: 100px;
+}
+.HeaderButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 40px;
+}
+.header_button {
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.HeaderButtons button:first-child {
+  background-color: var(--lightBlac);
+  color: #ffffff;
+  border: 1px solid var(--midwhite);
+  border-radius: 5px;
+  padding: 0 1rem;
+}
+.HeaderButtons button:last-child {
+  background-color: var(--blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0 1rem;
+  transition: all 0.5s ease;
+}
+.HeaderButtons button:last-child:hover {
+  color: var(--lightBlac);
+  background-color: var(--midwhite);
+}
+.search_section {
+  height: 50vh;
+  background-color: var(--midwhite);
+}
+.main {
+  background-color: var(--white);
+}
+.search_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.search_heading {
+  font-size: 4rem;
+}
+.search {
+  width: max-content;
+  display: flex;
+  padding: 14px;
+  border-radius: 28px;
+  align-items: center;
+
+  position: relative;
+}
+.search img {
+  width: 70px;
+  height: 30px;
+  position: absolute;
+  transform: translateX(580px);
+  cursor: pointer;
+}
+.search #search {
+  width: 650px;
+  height: 60px;
+  border: none;
+  border: 1px solid var(--lightBlac);
+  border-radius: 5px;
+  padding: 0 2rem;
+  outline: none;
+}
+.search #search:focus {
+  border: 1px solid var(--blue);
+}
+.search #search::placeholder {
+  color: var(--lightBlac);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
