@@ -136,11 +136,11 @@ ul > li {
   padding: 10rem;
 }
 .aritcleSection article {
-  min-width: 368px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
+  border: 2px solid red;
 }
 .aritcleSection img {
   width: 100px;
@@ -247,5 +247,19 @@ ul > li {
   }
   .search_heading {
     font-size: 3rem; /* Decrease font size for smaller screens */
+  }
+  .aritcleSection {
+    padding: 5rem;
+  }
+  .aritcleSection img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid blue;
+  }
+  .article_details h1 {
+    font-size: 1.2rem;
+  }
+  .article_details p {
+    font-size: 1rem;
   }
 }
