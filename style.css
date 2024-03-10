@@ -25,7 +25,7 @@ ul > li {
   list-style: none;
 }
 
-.Header {
+.HeaderForPc {
   height: 80px;
   background-color: var(--darkBlack);
   display: flex;
@@ -81,13 +81,14 @@ ul > li {
   color: var(--lightBlac);
   background-color: var(--midwhite);
 }
-.search_section {
-  height: 50vh;
-  background-color: var(--midwhite);
-}
 .main {
   background-color: var(--white);
 }
+.search_section {
+  height: 400px;
+  background-color: var(--midwhite);
+}
+
 .search_section {
   display: flex;
   flex-direction: column;
@@ -96,32 +97,28 @@ ul > li {
   gap: 1rem;
 }
 .search_heading {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 .search {
-  width: max-content;
-  display: flex;
-  padding: 14px;
-  border-radius: 28px;
-  align-items: center;
-
   position: relative;
+  min-width: 300px;
+  width: 40%;
+}
+.search #search {
+  width: 100%;
+  height: 50px;
+  padding: 14px;
+  border-radius: 7px;
+  border: 1px solid var(--lightBlac);
+  font-size: 1rem;
 }
 .search img {
   width: 70px;
   height: 30px;
   position: absolute;
-  transform: translateX(580px);
+  top: 50%;
+  transform: translate(-70px, -50%);
   cursor: pointer;
-}
-.search #search {
-  width: 650px;
-  height: 60px;
-  border: none;
-  border: 1px solid var(--lightBlac);
-  border-radius: 5px;
-  padding: 0 2rem;
-  outline: none;
 }
 .search #search:focus {
   border: 1px solid var(--blue);
@@ -132,17 +129,14 @@ ul > li {
   letter-spacing: 1px;
 }
 .aritcleSection {
-  width: 100vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-content: space-around;
-  gap: 4rem 1rem;
-  padding: 5rem;
+  gap: 4rem 4rem;
+  padding: 10rem;
 }
 .aritcleSection article {
-  margin: 0rem auto;
-  width: 450px;
-  height: 200px;
+  min-width: 368px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -153,12 +147,13 @@ ul > li {
   height: 100px;
 }
 .aritcleSection h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
 }
 .aritcleSection p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.5;
+  color: var(--lightBlac);
 }
 .article_details {
   display: flex;
@@ -195,4 +190,68 @@ ul > li {
   color: var(--white);
   font-size: 1.2rem;
   font-weight: bold;
+}
+.HeaderFormbl {
+  display: none;
+}
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+  .HeaderForPc {
+    display: none;
+  }
+  .HeaderFormbl {
+    display: block;
+    background: var(--darkBlack);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .HeaderFormbl .HeaderButtons {
+    color: var(--midwhite);
+    position: absolute;
+    background-color: var(--lightBlac);
+    min-height: 0;
+    width: 100vw;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.1s, min-height 0.3s ease;
+  }
+  .HeaderButtons.active {
+    min-height: 180px;
+    opacity: 1;
+  }
+  .header_button {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .header_button:hover {
+    opacity: 0.5;
+  }
+  .border {
+    width: 50%;
+    height: 1px;
+    background-color: var(--midwhite);
+  }
+  .bar {
+    color: var(--midwhite);
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .search_heading {
+    font-size: 3rem; /* Decrease font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .search_heading {
+    font-size: 2rem; /* Further decrease font size for even smaller screens */
+  }
 }
