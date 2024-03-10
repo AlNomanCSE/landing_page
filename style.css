@@ -205,6 +205,9 @@ ul > li {
     justify-content: space-between;
     position: relative;
   }
+  .HeaderFormbl .logoName {
+    padding-left: 1rem;
+  }
 
   .HeaderFormbl .HeaderButtons {
     color: var(--midwhite);
@@ -240,7 +243,7 @@ ul > li {
     color: var(--midwhite);
     position: absolute;
     right: 40px;
-    top: 40px;
+    top: 35px;
     font-size: 2rem;
     cursor: pointer;
   }
