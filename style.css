@@ -164,7 +164,7 @@ ul > li {
   padding: 2rem;
   height: fit-content;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
   color: var(--midwhite);
   background-color: var(--lightBlac);
@@ -172,6 +172,7 @@ ul > li {
 .footer-column {
   line-height: 1.6;
   margin: 0 auto;
+  border: 1px solid red;
 }
 .footer-column h3,
 .footer-column .strong {
@@ -247,11 +248,5 @@ ul > li {
   }
   .search_heading {
     font-size: 3rem; /* Decrease font size for smaller screens */
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .search_heading {
-    font-size: 2rem; /* Further decrease font size for even smaller screens */
   }
 }
